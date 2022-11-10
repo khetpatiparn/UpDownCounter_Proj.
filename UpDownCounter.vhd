@@ -21,7 +21,6 @@ begin
 	
 		if rising_edge(clk) then
 			if clear = '1' then
-				--qs <= "000";
 				counter_updown <= "000";
 			--count up--
 			elsif updown = '0' then
@@ -33,7 +32,6 @@ begin
 		end if;
 		
 	end process;
-		--q <= qs;
 		q <= counter_updown;
 end architecture;
 

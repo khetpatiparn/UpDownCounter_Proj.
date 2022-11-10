@@ -16,7 +16,7 @@ architecture sim of UpDownCounterTb is
 	
 begin
 
-	clk <= not clk after clkpreriod /2 ;
+	clk <= not clk after clkpreriod /2 ; --
 	
 	i_UpDownCounter : entity work.UpDownCounter(rtl)
 	port map(
@@ -29,7 +29,7 @@ begin
 	begin
 		clear <= '1';
 		updown <= '0';
-		wait for 10 ns;
+		wait for 30 ns;
 		clear <= '0';
 		wait for 125 ns;
 		updown <= '1';
