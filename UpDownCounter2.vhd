@@ -21,19 +21,16 @@ begin
 			or (ud and qs(1) and qs(0));
 	D(0) <= not qs(0);
 	
-	process (clk) is
-	begin
-		
+	process (clk, clear, updown) is
+	begin	
 		if rising_edge(clk) then
 			if clear = '1' then
 				qs <= "000";
-
 			elsif clear = '0' then 
 			--count up--
 				if updown = '0' then
 					ud <= '0';
-					qs <= D;
-				
+					qs <= D;		
 			--count down--
 				elsif updown = '1' then
 					ud <= '1';
