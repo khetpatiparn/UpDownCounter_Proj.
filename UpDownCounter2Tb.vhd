@@ -25,9 +25,9 @@ begin
 		q 		=> q,
 		updown => updown);
 		
-	stim_proc : process
+	process is
 	begin
-
+	
 		clear <= '1';
 		updown <= '0';
 		wait for 30 ns;
